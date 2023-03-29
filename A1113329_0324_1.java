@@ -23,31 +23,18 @@ class animal{
 public class A1113329_0324_1 {
     public static void main(String[] argv){
         animal []animals = new animal [4];
+
+        String []name = {"雪寶","驢子","安那","愛沙"};
+        double []height = {1.1,1.5,1.7,1.7} ;
+        int []weight = {52,99,48,50};
+        int []speed = {100,200,120,120};
+
         for(int i = 0;i<4;i++){
             animals[i] = new animal();
-        }
-
-        animals[0].name = "雪寶";
-        animals[0].height = 1.1;
-        animals[0].weight = 52;
-        animals[0].speed = 100;
-
-        animals[1].name = "驢子";
-        animals[1].height = 1.5;
-        animals[1].weight = 99;
-        animals[1].speed = 200;
-        
-        animals[2].name = "安那";
-        animals[2].height = 1.7;
-        animals[2].weight = 48;
-        animals[2].speed = 120;
-        
-        animals[3].name = "愛沙";
-        animals[3].height = 1.7;
-        animals[3].weight = 50;
-        animals[3].speed = 120;
-        
-        for(int i = 0;i<4;i++){
+            animals[i].name = name[i];
+            animals[i].height = height[i];
+            animals[i].weight = weight[i];
+            animals[i].speed = speed[i];
             animals[i].show();
         }
 
@@ -58,12 +45,12 @@ public class A1113329_0324_1 {
             int x = sc.nextInt();
             System.out.println("請輸入"+a.name+"的加速度(y)。若無請輸入0");
             double y = sc.nextDouble();
-            double speed;
+            double dist;
             if (y>0)
-                speed = a.distance(x,y);
+                dist = a.distance(x,y);
             else
-                speed = a.distance(x);
-            System.out.println(a.name+"的奔跑距離為"+speed);
+                dist = a.distance(x);
+            System.out.println(a.name+"的奔跑距離為"+dist);
         }   
     }
 }
